@@ -13,7 +13,7 @@ y = data.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
 
 # Train model (change max_depth for versions)
-model = DecisionTreeClassifier(max_depth=3)
+model = DecisionTreeClassifier(max_depth=5)
 model.fit(X_train, y_train)
 
 # Predict
@@ -23,4 +23,4 @@ acc = accuracy_score(y_test, y_pred)
 print("Accuracy:", acc)
 
 # Save model
-joblib.dump(model, "model_v1.pkl")
+joblib.dump(model, "model_v2.pkl")
